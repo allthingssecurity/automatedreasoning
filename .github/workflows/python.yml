@@ -14,6 +14,9 @@ jobs:
       with:
         repository: Z3Prover/z3
         ref: master
+    - name: List files in directory
+      run: ls
+      working-directory: z3 # set the working directory to the cloned repository directory
     - name: Install z3 solver
       run: |
         cd z3
