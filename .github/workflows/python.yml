@@ -3,7 +3,7 @@ name: Run Python Program
 on:
   push:
     paths:
-      - '**.txt'
+      - '**.json'
 
 jobs:
   run:
