@@ -3,13 +3,24 @@ name: Run Python Program
 on:
   push:
     paths:
-      - '**.json'
+      - '**.txt'
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Clone z3 repository
+      uses: actions/checkout@v2
+      with:
+        repository: Z3Prover/z3
+        ref: master
+    - name: Install z3 solver
+      run: |
+        cd z3
+        python scripts/mk_make.py
+        cd build
+        make
+      shell: bash
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
