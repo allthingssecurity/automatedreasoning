@@ -14,6 +14,7 @@ jobs:
       with:
         repository: Z3Prover/z3
         ref: master
+        path:z3
     - name: List files in directory
       run: ls
       working-directory: z3 # set the working directory to the cloned repository directory
