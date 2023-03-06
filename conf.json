@@ -1,5 +1,6 @@
 {
   "max_hits": 500,
-  "min_hits": 101,
+  "min_hits": 100,
   "num_cars": 25,
+  "name":"Shashank"
 }
