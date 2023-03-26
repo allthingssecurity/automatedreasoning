@@ -1,0 +1,27 @@
+{
+  "database": {
+    "host": "127.0.0.1",
+    "port": 7000,
+    "user": "admin",
+    "password": "mypassword"
+  },
+  "api": {
+    "version": "1.0",
+    "endpoints": [
+      {
+        "path": "/users",
+        "method": "GET",
+        "rate_limit": 1
+      },
+      {
+        "path": "/posts",
+        "method": "POST",
+        "rate_limit": 500
+      }
+    ]
+  },
+  "logging": {
+    "level": "info",
+    "file": "app.log"
+  }
+}
